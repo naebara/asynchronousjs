@@ -60,12 +60,12 @@ Promise.all([projectsPromise, taskListsPromise, tasksPromise])
         let taskListName = document.createTextNode(taskList.name);
         ul.appendChild(taskListName);
         taskList.tasks.forEach((i) => {
-          let lil = document.createElement("ul");
-
+          let ull = document.createElement("ul");
+          let lil = document.createElement("li");
           let taskName = document.createTextNode(i);
-
           lil.appendChild(taskName);
-          ul.appendChild(lil);
+          ull.appendChild(lil);
+          ul.appendChild(ull);
         });
         li.appendChild(ul);
       });
